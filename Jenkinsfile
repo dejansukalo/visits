@@ -27,7 +27,8 @@ pipeline {
                 sshagent(credentials: ['dev-server']) {
                     sh "ssh -o StrictHostKeyChecking=no ec2-user@3.68.104.109 docker run -p 8080:8080 -d --name my-app dejansukalo/visits:1.0"
                 }
-            }
+            }    
+        }
     }
     post {
         always {
