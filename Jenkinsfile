@@ -25,7 +25,7 @@ pipeline {
         stage ('Run container on Dev server') {
             steps {
                 sshagent(credentials: ['dev-server']) {
-                    sh "ssh -o StrictHostKeyChecking=no ec2-user@3.68.104.109 docker-compose up"
+                    sh "ssh -o StrictHostKeyChecking=no ec2-user@35.157.140.172  docker-compose up"
                 }
             }    
         }
